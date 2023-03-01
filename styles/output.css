@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: epilogue;
+}
+
+.navi nav p:hover, .navi nav select:hover, header .actions .reg:hover, header .actions .login:hover {
+  color: rgb(58, 55, 55);
+}
+
+.navi nav select, .navi nav, header .actions .login, header .actions {
+  color: rgb(100, 94, 94);
+  font-weight: 700;
+}
+
+.navi nav, .navi, header .actions, header {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+header .actions {
+  gap: 25px;
+}
+header .actions .login {
+  border: 1px solid white;
+  padding: 0px 0px;
+  color: rgb(100, 94, 94);
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 14px;
+  border-radius: 10px;
+}
+header .actions .reg {
+  border: 1px solid rgb(100, 94, 94);
+  padding: 10px 20px;
+  color: rgb(100, 94, 94);
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 14px;
+  border-radius: 10px;
+}
+header .actions .reg:hover {
+  border: 1px solid rgb(58, 55, 55);
+}
+
+.navi {
+  gap: 60px;
+}
+.navi nav {
+  gap: 25px;
+}
+.navi nav select {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=output.css.map */
