@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: epilogue;
+}
+$gray:rgb(100, 94, 94);
+
+@mixin button($border, $px, $py, $text, $bg, $size) {
+    border: 1px solid $border;
+    padding: $px $py;
+    color: $text;
+    text-decoration:none;
+    background-color: $bg;
+    font-size: $size;
+    border-radius: 10px;
+}
+%hover {
+    color: rgb(58, 55, 55);
+}
+%text-style{
+    color: $gray;
+    font-weight: 700;
+}
+%flex{
+    display: flex;
+    align-items: center;
+}
+header{
+    @extend %flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    .actions{
+        @extend %flex;
+        @extend %text-style;
+        gap: 25px;
+        .login{
+            @extend %text-style;
+            @include button(white, 0px, 0px, $gray, transparent, 14px)
+
+        }
+        .login:hover{
+            @extend %hover;
+        }
+        .reg{
+            @include button($gray, 10px, 20px, $gray, transparent, 14px)
+        }
+        .reg:hover{
+            @extend %hover;
+            border: 1px solid rgb(58, 55, 55);
+        }
+    }
+}
+.navi{
+    @extend %flex;
+    gap: 60px;
+    nav{
+        @extend %flex;
+        @extend %text-style;
+        gap: 25px;
+        
+        select{
+            border: none;
+            outline: none;
+            @extend %text-style;
+            font-size: 14px;
+        }
+        select:hover{
+           @extend %hover;
+        }
+       p:hover{
+        @extend %hover;
+       }
+    }
+}
